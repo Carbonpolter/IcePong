@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <clipPath id="clip-Game">
+      <rect width="1920" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="Game" clip-path="url(#clip-Game)">
+    <rect width="1920" height="1080" fill="#fff"/>
+    <rect id="Rechteck_4" data-name="Rechteck 4" width="1920" height="1080" fill="#e2e6f2"/>
+    <rect id="Rechteck_11" data-name="Rechteck 11" width="32" height="1080" transform="translate(652)" fill="#6065ff"/>
+    <rect id="Rechteck_12" data-name="Rechteck 12" width="32" height="1080" transform="translate(1222)" fill="#6065ff"/>
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(775 359)" fill="none" stroke="#6065ff" stroke-width="13">
+      <circle cx="178" cy="178" r="178" stroke="none"/>
+      <circle cx="178" cy="178" r="171.5" fill="none"/>
+    </g>
+    <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(188 75)" fill="none" stroke="red" stroke-width="8">
+      <circle cx="178" cy="178" r="178" stroke="none"/>
+      <circle cx="178" cy="178" r="174" fill="none"/>
+    </g>
+    <g id="Ellipse_4" data-name="Ellipse 4" transform="translate(188 649)" fill="none" stroke="red" stroke-width="8">
+      <circle cx="178" cy="178" r="178" stroke="none"/>
+      <circle cx="178" cy="178" r="174" fill="none"/>
+    </g>
+    <g id="Ellipse_5" data-name="Ellipse 5" transform="translate(1376 649)" fill="none" stroke="red" stroke-width="8">
+      <circle cx="178" cy="178" r="178" stroke="none"/>
+      <circle cx="178" cy="178" r="174" fill="none"/>
+    </g>
+    <g id="Ellipse_6" data-name="Ellipse 6" transform="translate(1376 75)" fill="none" stroke="red" stroke-width="8">
+      <circle cx="178" cy="178" r="178" stroke="none"/>
+      <circle cx="178" cy="178" r="174" fill="none"/>
+    </g>
+    <circle id="Ellipse_2" data-name="Ellipse 2" cx="16" cy="16" r="16" transform="translate(937 524)" fill="#6065ff"/>
+    <circle id="Ellipse_9" data-name="Ellipse 9" cx="16" cy="16" r="16" transform="translate(350 811)" fill="red"/>
+    <circle id="Ellipse_10" data-name="Ellipse 10" cx="16" cy="16" r="16" transform="translate(350 237)" fill="red"/>
+    <circle id="Ellipse_11" data-name="Ellipse 11" cx="16" cy="16" r="16" transform="translate(1538 237)" fill="red"/>
+    <circle id="Ellipse_12" data-name="Ellipse 12" cx="16" cy="16" r="16" transform="translate(1538 811)" fill="red"/>
+    <rect id="Rechteck_13" data-name="Rechteck 13" width="11" height="1080" transform="translate(947)" fill="red"/>
+    <path id="Differenzmenge_2" data-name="Differenzmenge 2" d="M1920,1080H1536.778L1920,258.178V1080Zm-443.908,0h-35.311L1920,52.314v75.722L1476.092,1080Zm-57.378,0H1229.125L1732.737,0H1920V4.99L1418.714,1080Zm-286.686,0H816.191L1319.8,0h315.838L1132.028,1080Zm-467,0H397.738L901.352,0H1168.64L665.028,1080ZM366.1,1080h-55.62L814.1,0h55.619L366.1,1080Zm-272.985,0H0V642.308L299.514,0H596.729L93.118,1080ZM0,434.083V0H202.416Z" fill="#99a7c9" opacity="0.33"/>
+  </g>
+</svg>
