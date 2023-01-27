@@ -14,8 +14,10 @@ let field = document.querySelector(".playground");
 let viewportHeight = window.innerHeight;
 let viewportWidth = window.innerWidth;
 
-let score1 = 0;
-let score2 = 0;
+let SCORE = {
+  score1: 0,
+  score2: 0,
+};
 
 let display1 = document.querySelector(".display1");
 let display2 = document.querySelector(".display2");
@@ -24,11 +26,16 @@ const DIR = {
   right: true,
   down: true,
 };
-const xc = 7;
-const yc = 5;
 
-let x = xc;
-let y = yc;
+const BASESPEED = {
+  x: 7,
+  y: 5,
+};
+
+let SPEED = {
+  x: BASESPEED.x,
+  y: BASESPEED.y,
+};
 
 let gameloop = false;
 
@@ -36,24 +43,24 @@ setTimeout(() => {
   function loop() {
     if (gameloop == true) {
       // Speed increase
-      x = x + 0.005;
-      y = y + 0.0035;
+      SPEED.x = SPEED.x + 0.005;
+      SPEED.y = SPEED.y + 0.0035;
 
       // Puck direction
       if (DIR.right == true) {
-        puck.style.left = parseInt(puck.style.left) + x + "px";
+        puck.style.left = parseInt(puck.style.left) + SPEED.x + "px";
       }
 
       if (DIR.right == false) {
-        puck.style.left = parseInt(puck.style.left) - x + "px";
+        puck.style.left = parseInt(puck.style.left) - SPEED.x + "px";
       }
 
       if (DIR.down == true) {
-        puck.style.top = parseInt(puck.style.top) + y + "px";
+        puck.style.top = parseInt(puck.style.top) + SPEED.y + "px";
       }
 
       if (DIR.down == false) {
-        puck.style.top = parseInt(puck.style.top) - y + "px";
+        puck.style.top = parseInt(puck.style.top) - SPEED.y + "px";
       }
 
       // Puck boarder detection
@@ -79,16 +86,16 @@ setTimeout(() => {
         DIR.right = false;
       }
 
-      // goal detection
+      // Goal detection
       if (parseInt(puck.style.left) < 0) {
         puck.style.top = "100px";
         puck.style.left = "100px";
         DIR.right = true;
         DIR.down = true;
-        x = xc;
-        y = yc;
-        score2 = score2 + 1;
-        display2.textContent = score2;
+        SPEED.x = BASESPEED.x;
+        SPEED.y = BASESPEED.y;
+        SCORE.score2 = SCORE.score2 + 1;
+        display2.textContent = SCORE.score2;
       }
 
       if (
@@ -99,10 +106,10 @@ setTimeout(() => {
         puck.style.left = parseInt(viewportWidth) - 100 + "px";
         DIR.right = false;
         DIR.down = true;
-        x = xc;
-        y = yc;
-        score1 = score1 + 1;
-        display1.textContent = score1;
+        SPEED.x = BASESPEED.x;
+        SPEED.y = BASESPEED.y;
+        SCORE.score1 = SCORE.score1 + 1;
+        display1.textContent = SCORE.score1;
       }
 
       // Controls
@@ -127,26 +134,26 @@ setTimeout(() => {
 
       // End of game
       setTimeout(() => {
-        if (score1 >= 3) {
+        if (SCORE.score1 >= 3) {
           alert("Player 1 has won the game! Thank you for playing.");
           gameloop = false;
-          score1 = 0;
-          score2 = 0;
-          display1.textContent = score1;
-          display2.textContent = score2;
+          SCORE.score1 = 0;
+          SCORE.score2 = 0;
+          display1.textContent = SCORE.score1;
+          display2.textContent = SCORE.score2;
         }
 
-        if (score2 >= 3) {
+        if (SCORE.score2 >= 3) {
           alert("Player 2 has won the game! Thank you for playing.");
           gameloop = false;
-          score1 = 0;
-          score2 = 0;
-          display1.textContent = score1;
-          display2.textContent = score2;
+          SCORE.score1 = 0;
+          SCORE.score2 = 0;
+          display1.textContent = SCORE.score1;
+          display2.textContent = SCORE.score2;
         }
       }, "100");
     } else {
-      // start/restart of the game
+      // Start/Restart of the game
       alert("Press 'Ok' to start/restart the game.");
       alert("Player 1 uses the 'W' and 'S' keys.");
       alert("Player 2 uses the up and down arrow keys.");
